@@ -1,0 +1,420 @@
+/* Utils */
+
+body {
+   overflow-x: hidden;
+}
+
+
+.hide, .desktop-nav {
+   display: none;
+}
+.none-style{
+   list-style-type: none;
+}
+
+.wrapper {
+   padding: 1em;
+   position: relative;
+}
+
+
+
+.d-flex {
+   display: flex;
+}
+
+.between {
+   justify-content: space-between;
+}
+
+.f-2 {
+   font-size: 4.25rem !important;
+}
+
+.f-3 {
+   font-size: 3.75rem !important;
+}
+
+.f-4 {
+   font-size: 2.75rem !important;
+}
+
+.f-5 {
+   font-size: 2rem !important;
+}
+
+
+
+.d-grid {
+   display: grid;
+}
+
+.col-md-12 {
+   grid-template-columns: 1fr;
+}
+
+.gap-1 {
+   gap: 2em;
+}
+
+
+
+#works , #workWithMe , #contact {
+   margin-block: 10em;
+}
+
+
+/* Utils */
+
+
+
+
+
+/* Navbar */
+
+.nav {
+   overflow: hidden;
+   position: fixed;
+   z-index: 100000;
+   top: 0;
+   padding-top: .75em;
+   width: 93vw;
+   height: 60px;
+
+
+   /* From https://css.glass */
+   background: rgba(255, 255, 255, 0.15);
+   border-radius: 16px;
+   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+   backdrop-filter: blur(10.2px);
+   -webkit-backdrop-filter: blur(10.2px);
+   border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+.desktop-nav {
+   list-style-type: none !important;
+}
+
+.desktop-nav li {
+   padding-top: .5em;
+   list-style-type: none !important;
+   list-style: none !important;
+}
+
+.desktop-nav li:last-child {
+   padding-top: 0px;
+}
+
+.brand{
+   text-decoration: none;
+   color: inherit;
+}
+
+.brand img {
+   width: 25px;
+   height: 25px;
+   margin-top: 1em;
+}
+
+.brand h1 {
+   margin-top: 12px;
+}
+
+
+
+
+.mobile-nav {
+   width: 25px;
+   height: 25px;
+   margin-top: 1em;
+}
+
+.mobile-nav img {
+   width: 100%;
+}
+
+.desktop-nav li {
+   margin-top: 1em;
+}
+
+.desktop-nav a {
+   color: black;
+   text-decoration: none;
+}
+
+
+
+/* Navbar */
+
+
+/* Hero */
+.hero-body {
+   padding-top: 5.25em;
+}
+
+.hero-body h3 {
+   font-weight: 500;
+}
+
+.hero-body p {
+   color: rgb(172, 172, 172);
+   margin-top: 1.5em;
+}
+
+
+.gradient-overlay {
+   width: 500px;
+   height: 550px;
+   position: absolute;
+   z-index: -100000;
+   right: 52%;
+   bottom: 46%;
+
+}
+
+.gradient-overlay img {
+   min-width: 100%;
+   transform: scale(2);
+   animation: gradient 30s ease-in-out forwards alternate-reverse infinite;
+}
+
+
+/* Hero */
+
+
+/* Work */
+
+
+
+.work {
+   background-color: #3db4cf;
+   border-radius: .75em;
+   height: 250px;
+   padding: 2em;
+   margin-bottom: 1em;
+   position: relative;
+   overflow: hidden;
+   z-index: -2;
+
+}
+
+.work::after {
+   content: "";
+   background-image: linear-gradient(180deg, rgba(3, 10, 11, 0) 63%, #1d2628);
+   background-position: 0 0, 100% 0;
+   background-size: auto, cover;
+   background-repeat: repeat, no-repeat;
+   height: 300px;
+   width: 100%;
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: -2;
+}
+
+
+.work h3 {
+   color: white;
+   text-decoration: none;
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   padding-left: .75em;
+   z-index: -1;
+}
+
+.work img {
+   width: 100%;
+   position: absolute;
+   left: -100px;
+   top: 70px;
+   z-index: -2;
+   transform: scale(1.2);
+}
+
+
+
+
+#workWithMe{
+   text-align: center;
+}
+
+#workWithMe img {
+   width: 170px;
+   height: 170px;
+   border-radius: 50%;
+   margin-inline: auto;
+   display: block;
+   padding-block: 1em;
+}
+
+#workWithMe h4 {
+   font-size: 2.5rem;
+  font-weight: bold;
+  padding-bottom: 0;
+  margin-bottom: 0;
+
+}
+
+#workWithMe h5 {
+   font-size: 2.25;
+  font-weight: 500;
+  
+}
+
+
+#workWithMe p {
+   padding-block: 2.75em;
+   font-size: 2rem;
+}
+
+/* Work */
+
+/* Footer */
+
+.footer{
+   text-align: center;
+   padding-top: 2em;
+   padding-bottom: 10px;
+}
+.footer ul {
+   padding-top: 1em;
+}
+.footer ul li{
+   margin-inline: 4px!important;
+}
+.footer a{
+   text-decoration: none;
+   color: #1d2628;
+}
+
+.footer .logo{
+   padding-block: 1.5em;
+}
+
+
+/* Animation */
+
+@keyframes gradient {
+   0%, 100% {
+      transform: translate3d(49.994px, 18.614px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(220.801deg) skew(0deg, 0deg);
+      transform-style: preserve-3d;
+      opacity: 0.4;
+      will-change: opacity, transform;
+
+   }
+
+   30% {
+      transform: translate3d(49.994px, 18.614px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(310.801deg) skew(0deg, 0deg);
+      transform-style: preserve-3d;
+      opacity: 0.9;
+      will-change: opacity, transform;
+   }
+
+   60% {
+      transform: translate3d(49.994px, 18.614px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(305.801deg) skew(0deg, 0deg);
+      transform-style: preserve-3d;
+      opacity: 0.89;
+      will-change: opacity, transform;
+   }
+
+   90% {
+      transform: translate3d(49.994px, 18.614px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(110.801deg) skew(0deg, 0deg);
+      transform-style: preserve-3d;
+      opacity: 0.85;
+      will-change: opacity, transform;
+   }
+
+
+}
+
+
+/* Animation */
+
+/* dektop View */
+@media (min-width: 750px) {
+   .nav {
+      margin-inline: auto;
+      right: 0;
+      left: 0;
+   }
+
+   .mobile-nav {
+      display: none;
+   }
+
+   .desktop-nav {
+      display: flex;
+      gap: 1em;
+   }
+
+   .f-2 {
+      font-size: 6rem !important;
+   }
+
+   .f-5 {
+      font-size: 3rem !important;
+   }
+
+   #hero {
+      margin-top: 5em !important;
+   }
+
+
+   .gradient-overlay {
+      left: 50%;
+      bottom: 7%;
+      transform: scale(1.65);
+      width: 466px;
+      height: 550px;
+   }
+
+   .wrapper {
+      padding: 1em 2em;
+   }
+
+
+   .hero-body p {
+      width: 95%;
+   }
+
+   .hero-body button {
+      transform: scale(1.5);
+      margin-left: 3em;
+   }
+
+   .col-lg-6 {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   .work {
+      height: 450px;
+   }
+
+   .work:hover {
+      transform: scale(1.75);
+
+   }
+
+   #workWithMe  {
+      text-align: start;
+   }
+
+   .footer{
+      text-align: start;
+   
+   }
+   .footer ul {
+      justify-content: flex-end;
+      gap: 1em;
+   
+   }
+   .footer p{
+      text-align: center;
+   }
+
+}
+/* dektop View */

@@ -1,0 +1,16 @@
+---
+import Work from "./work.astro"
+import data from "../data/works_data"
+---
+
+<section id="works">
+   <div class="container">
+      <div class="d-grid col-md-12 col-lg-6 gap-1 between">
+         {
+            data?.map((work) => (
+               <Work title={work.title} src={work.src} link={work.link} />
+            ))
+         }
+      </div>
+   </div>
+</section>

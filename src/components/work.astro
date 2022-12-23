@@ -1,0 +1,11 @@
+---
+import type Work from "../model/work_model"
+
+const { link, src, title } = Astro.props as Work
+
+---
+
+<a class="work" href={link}>
+   <img src={src} />
+   <h3 class="f-5">{title}</h3>
+</a>

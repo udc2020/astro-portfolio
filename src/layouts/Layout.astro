@@ -1,0 +1,79 @@
+---
+// import skeleton Css Framework http://getskeleton.com/#intro
+import "../css/normalize.css"
+import "../css/skeleton.css"
+// import Global Css
+import "../css/global.css"
+
+// import props title 
+import type { Props } from "../model/props_title"
+
+// import icons 
+import { icons } from "../assets"
+// destructed icons 
+const { home, logo } = icons
+
+
+
+const { title = "Astro Portofolio" } = Astro.props as Props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<main class="wrapper">
+			<nav class="nav d-flex between">
+				<a href="/" class="brand d-flex">
+					<img src={logo} />
+					<h1 class="f-4">emantic Portofolio</h1>
+				</a>
+
+				<ul class="desktop-nav">
+					<li><a href="/about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li>
+						<a class="button button-primary" href="work">View Work</a>
+					</li>
+				</ul>
+				<a class="mobile-nav">
+					<img src={home} alt="" />
+				</a>
+			</nav>
+			<slot />
+
+			<footer class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="six columns">
+							<a class="logo" href="/">
+								<img src={logo} alt="" />
+							</a>
+						</div>
+						<div class="six columns">
+							<ul class="none-style d-flex between">
+								<li><a href="">Drible</a></li>
+								<li><a href="">Instagram</a></li>
+								<li><a href="">Linkdin</a></li>
+								<li><a href="">About</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="row">
+						<p>
+							Copyright © 2020 Semantic Portofolio. All rights reserved.
+						</p>
+					</div>
+				</div>
+			</footer>
+		</main>
+	</body>
+</html>
